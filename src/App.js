@@ -1,8 +1,19 @@
 import React from "react";
-import Alert from "./components/Alert";
+import Navbar from './components/Navbar';
+import Cards from './components/Cards';
 
 function App() {
-  return <Alert type="success">Hi!</Alert>;
+  return (
+    <div>
+      <Navbar />
+      <Cards name="Jennifer"/>
+      <Cards name="Benn"/>
+      <Cards name="Sopee"/>
+      <Cards name="Hannah"/>
+      <Cards name="Matt"/>
+      <Cards name="Liz"/>
+    </div>
+  );
 }
 
 export default App;
