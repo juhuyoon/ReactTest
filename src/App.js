@@ -1,12 +1,8 @@
 import React from "react";
-import HelloReact from "./components/HelloReact";
-import Ian from './components/Ian';
+import HelloDiv from "./components/HelloDiv";
 
 function App() {
-  return (
-  <HelloReact />,
-  <Ian />
-  );
+  return <HelloDiv />;
 }
 
 export default App;
