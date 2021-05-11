@@ -1,26 +1,28 @@
 import React from "react";
+const name = "Jung";
+const thoughts = "I love React woo hoo!"
 
-const name = "Jude";
-const num1 = 1;
-const num2 = 2;
-///////////////////////////////////////////////////////////
+const removeVowels = (str) => {
+  const vowels = ["a", "e", "i", "o", "u"];
+  let result = "";
+
+  for(let i = 0; i < str.length; i++) {
+    if(!vowels.includes(str[i].toLowerCase())) {
+      result += str[i];
+    }
+  }
+  return result;
+}
+
 function JSXVariables() {
   return (
     <div className="main-container">
       <div className="container">
         <div className="jumbotron">
-          {/* JavaScript expressions can be escaped inside of curly braces */}
-
-          <h2>My name is {name}. But you can call me...</h2>
-          <h1>The JSX Boss!</h1>
-          <hr />
-          <h2>I can do math: {num1 + num2}.</h2>
-          <h2>
-            I can generate random numbers:
-            {Math.floor(Math.random() * 10) + 1},{Math.floor(Math.random() * 10) + 1},
-            {Math.floor(Math.random() * 10) + 1}.
-          </h2>
-          <h2>I can even reverse my name: {name.split("").reverse()}</h2>
+          <h1>Hi! My name is {name}</h1>
+          <h3>The length of my name is {name.length}</h3>
+          <h2>My name has {removeVowels(name)} letters without vowels</h2>
+          <h2>I think React {thoughts}</h2>
         </div>
       </div>
     </div>
