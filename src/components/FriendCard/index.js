@@ -1,7 +1,9 @@
 import React from 'react';
 import './style.css';
 
+// Parameters/arguments we pass into our FriendCard function
 function FriendCard(props) {
+  console.log(props);
   return (
     <div className="card">
       <div className="img-container">
@@ -17,6 +19,9 @@ function FriendCard(props) {
           </li>
           <li>
             <strong>Location:</strong> {props.location}
+          </li>
+          <li>
+            <strong>Color</strong> {props.color}
           </li>
         </ul>
       </div>
