@@ -1,13 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import UserContext from '../../utils/userContext';
 
 function CardBody() {
+  const { user } = useContext(UserContext);
   return (
-    <p className="h4 pt-3">
-      GitHub:{' '}
-      <a target="blank" href={'#GITHUB PROFILE URL HERE'}>
-        {'GITHUB PROFILE URL HERE'}
-      </a>
-    </p>
+    <div>
+      <h4>Favorite language: {user.language}</h4>
+    </div>
   );
 }
 
